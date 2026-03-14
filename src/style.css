@@ -1,0 +1,66 @@
+/* Container for the whole form */
+.container {
+    max-width: 400px;
+    margin: 2rem auto;
+    font-family: sans-serif;
+}
+
+.form-control {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* highlight in red when field */
+input:focus:invalid {
+    border: 2px solid #ff4d4d;
+    outline: none;
+}
+/* error message styling */
+.error-message {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: white;
+    background-color: #ff4d4d;
+    padding: 0 0.5rem;
+    border-radius: 4px;
+    /* hide by default */
+    display: block;
+    min-height: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+/* show error message when active  classs is added by JS */
+.error-message.active {
+    max-height: 100px;
+    padding: 0.3rem 0.5rem;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
